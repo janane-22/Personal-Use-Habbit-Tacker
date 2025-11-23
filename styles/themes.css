@@ -1,0 +1,570 @@
+/* ==========================================================================
+   HabitFlow - Themes CSS
+   ========================================================================== */
+
+/* Light Theme */
+.theme-light {
+    --bg-page: #ffffff;
+    --bg-surface: #f8fafc;
+    --bg-surface-2: #f1f5f9;
+    --border-default: #e2e8f0;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    
+    /* Adjust accent colors for light theme */
+    --habit-gold: #f59e0b;
+    --habit-rose: #e11d48;
+    --habit-emerald: #059669;
+    --habit-sky: #0284c7;
+    --habit-violet: #7c3aed;
+}
+
+/* Auto Theme (follows system preference) */
+@media (prefers-color-scheme: light) {
+    .theme-auto {
+        --bg-page: #ffffff;
+        --bg-surface: #f8fafc;
+        --bg-surface-2: #f1f5f9;
+        --border-default: #e2e8f0;
+        --text-primary: #1e293b;
+        --text-secondary: #64748b;
+        
+        --habit-gold: #f59e0b;
+        --habit-rose: #e11d48;
+        --habit-emerald: #059669;
+        --habit-sky: #0284c7;
+        --habit-violet: #7c3aed;
+    }
+}
+
+/* Dynamic Accent Colors */
+.theme-blue {
+    --primary-500: #3B82F6;
+    --primary-700: #1D4ED8;
+    --primary-light: #93C5FD;
+}
+
+.theme-green {
+    --primary-500: #10B981;
+    --primary-700: #047857;
+    --primary-light: #6EE7B7;
+}
+
+.theme-orange {
+    --primary-500: #F59E0B;
+    --primary-700: #D97706;
+    --primary-light: #FCD34D;
+}
+
+.theme-red {
+    --primary-500: #EF4444;
+    --primary-700: #DC2626;
+    --primary-light: #FCA5A5;
+}
+
+.theme-purple {
+    --primary-500: #8B5CF6;
+    --primary-700: #7C3AED;
+    --primary-light: #C4B5FD;
+}
+
+/* Themed Backgrounds */
+.theme-blue .habit-card:hover {
+    box-shadow: 0 0 24px rgba(59, 130, 246, 0.1);
+}
+
+.theme-green .habit-card:hover {
+    box-shadow: 0 0 24px rgba(16, 185, 129, 0.1);
+}
+
+.theme-orange .habit-card:hover {
+    box-shadow: 0 0 24px rgba(245, 158, 11, 0.1);
+}
+
+.theme-red .habit-card:hover {
+    box-shadow: 0 0 24px rgba(239, 68, 68, 0.1);
+}
+
+.theme-purple .habit-card:hover {
+    box-shadow: 0 0 24px rgba(139, 92, 246, 0.1);
+}
+
+/* Themed Progress Rings */
+.theme-blue .progress-ring-fill {
+    background: conic-gradient(var(--primary-500) 0deg, var(--primary-500) 0deg, transparent 0deg, transparent 360deg);
+}
+
+.theme-green .progress-ring-fill {
+    background: conic-gradient(var(--primary-500) 0deg, var(--primary-500) 0deg, transparent 0deg, transparent 360deg);
+}
+
+.theme-orange .progress-ring-fill {
+    background: conic-gradient(var(--primary-500) 0deg, var(--primary-500) 0deg, transparent 0deg, transparent 360deg);
+}
+
+.theme-red .progress-ring-fill {
+    background: conic-gradient(var(--primary-500) 0deg, var(--primary-500) 0deg, transparent 0deg, transparent 360deg);
+}
+
+.theme-purple .progress-ring-fill {
+    background: conic-gradient(var(--primary-500) 0deg, var(--primary-500) 0deg, transparent 0deg, transparent 360deg);
+}
+
+/* Themed Active States */
+.theme-blue .calendar-day.active {
+    border-color: var(--primary-500);
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.theme-green .calendar-day.active {
+    border-color: var(--primary-500);
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.theme-orange .calendar-day.active {
+    border-color: var(--primary-500);
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.theme-red .calendar-day.active {
+    border-color: var(--primary-500);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.theme-purple .calendar-day.active {
+    border-color: var(--primary-500);
+    background: rgba(139, 92, 246, 0.1);
+}
+
+/* Themed Focus States */
+.theme-blue .form-group input:focus,
+.theme-blue .form-group textarea:focus,
+.theme-blue .form-group select:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
+}
+
+.theme-green .form-group input:focus,
+.theme-green .form-group textarea:focus,
+.theme-green .form-group select:focus {
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.4);
+}
+
+.theme-orange .form-group input:focus,
+.theme-orange .form-group textarea:focus,
+.theme-orange .form-group select:focus {
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.4);
+}
+
+.theme-red .form-group input:focus,
+.theme-red .form-group textarea:focus,
+.theme-red .form-group select:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.4);
+}
+
+.theme-purple .form-group input:focus,
+.theme-purple .form-group textarea:focus,
+.theme-purple .form-group select:focus {
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.4);
+}
+
+/* Custom Scrollbars for Light Theme */
+.theme-light ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.theme-light ::-webkit-scrollbar-track {
+    background: var(--bg-surface-2);
+    border-radius: 4px;
+}
+
+.theme-light ::-webkit-scrollbar-thumb {
+    background: var(--border-default);
+    border-radius: 4px;
+}
+
+.theme-light ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+/* Dark Theme Scrollbars (Default) */
+.theme-dark ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.theme-dark ::-webkit-scrollbar-track {
+    background: var(--bg-surface);
+    border-radius: 4px;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb {
+    background: var(--border-default);
+    border-radius: 4px;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+/* Loading Screen Theme Adaptations */
+.theme-light .loading-screen {
+    background: var(--bg-page);
+}
+
+.theme-light .loading-spinner {
+    border-color: var(--border-default);
+    border-top-color: var(--primary-500);
+}
+
+/* Modal Theme Adaptations */
+.theme-light .modal-content {
+    background: var(--bg-surface);
+    border-color: var(--border-default);
+}
+
+.theme-light .modal-header {
+    border-bottom-color: var(--border-default);
+}
+
+/* Button Theme Adaptations */
+.theme-light .btn-secondary {
+    background: var(--bg-surface-2);
+    border-color: var(--border-default);
+    color: var(--text-primary);
+}
+
+.theme-light .btn-secondary:hover:not(:disabled) {
+    background: var(--bg-surface);
+    border-color: var(--primary-500);
+    color: var(--text-primary);
+}
+
+/* Nav Item Theme Adaptations */
+.theme-light .nav-item {
+    color: var(--text-secondary);
+}
+
+.theme-light .nav-item:hover {
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+}
+
+.theme-light .nav-item.active {
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+}
+
+/* Card Theme Adaptations */
+.theme-light .habit-card,
+.theme-light .progress-card,
+.theme-light .streak-card,
+.theme-light .stat-card,
+.theme-light .chart-card,
+.theme-light .create-habit-section,
+.theme-light .existing-habits-section,
+.theme-light .notes-interface,
+.theme-light .settings-section {
+    background: var(--bg-surface);
+    border-color: var(--border-default);
+}
+
+/* Calendar Day Theme Adaptations */
+.theme-light .calendar-day {
+    background: var(--bg-surface);
+    border-color: var(--border-default);
+}
+
+.theme-light .calendar-day:hover {
+    border-color: var(--primary-500);
+}
+
+.theme-light .progress-dot {
+    background: var(--bg-surface-2);
+    border-color: var(--border-default);
+}
+
+/* Year Calendar Theme Adaptations */
+.theme-light .year-calendar {
+    background: var(--bg-surface);
+    border-color: var(--border-default);
+}
+
+.theme-light .calendar-day-cell {
+    background: var(--bg-surface-2);
+    border-color: var(--border-default);
+}
+
+.theme-light .calendar-day-cell:hover {
+    transform: scale(1.4);
+    z-index: 10;
+    position: relative;
+}
+
+/* Notes Interface Theme Adaptations */
+.theme-light .note-textarea,
+.theme-light .date-input {
+    background: var(--bg-surface-2);
+    border-color: var(--border-default);
+    color: var(--text-primary);
+}
+
+.theme-light .file-upload-area {
+    border-color: var(--border-default);
+}
+
+.theme-light .file-upload-area:hover {
+    border-color: var(--primary-500);
+    background: rgba(59, 130, 246, 0.05);
+}
+
+.theme-light .attachment-item {
+    background: var(--bg-surface-2);
+}
+
+/* Settings Theme Adaptations */
+.theme-light .setting-control {
+    background: var(--bg-surface-2);
+    border-color: var(--border-default);
+    color: var(--text-primary);
+}
+
+.theme-light .toggle-label {
+    background: var(--border-default);
+}
+
+/* Bottom Navigation Theme Adaptations */
+.theme-light .bottom-nav {
+    background: var(--bg-surface);
+    border-top-color: var(--border-default);
+}
+
+/* File Upload Drag and Drop Styles */
+.file-upload-area.drag-over {
+    border-color: var(--primary-500);
+    background: rgba(59, 130, 246, 0.1);
+    transform: scale(1.02);
+}
+
+.theme-light .file-upload-area.drag-over {
+    background: rgba(59, 130, 246, 0.05);
+}
+
+/* Context Menu Styles */
+.context-menu {
+    position: fixed;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    padding: var(--space-sm);
+    z-index: 1000;
+    min-width: 160px;
+}
+
+.context-menu-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    color: var(--text-primary);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.context-menu-item:hover {
+    background: var(--bg-surface-2);
+}
+
+.context-menu-item.danger {
+    color: var(--error);
+}
+
+.context-menu-separator {
+    height: 1px;
+    background: var(--border-default);
+    margin: var(--space-sm) 0;
+}
+
+/* Toast Notifications */
+.toast {
+    position: fixed;
+    top: var(--space-lg);
+    right: var(--space-lg);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    padding: var(--space-md) var(--space-lg);
+    color: var(--text-primary);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 2000;
+    transform: translateX(100%);
+    transition: transform var(--transition-normal);
+    max-width: 300px;
+}
+
+.toast.show {
+    transform: translateX(0);
+}
+
+.toast.success {
+    border-color: var(--success);
+}
+
+.toast.error {
+    border-color: var(--error);
+}
+
+.toast.warning {
+    border-color: var(--warning);
+}
+
+.toast-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-sm);
+}
+
+.toast-title {
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0;
+    font-size: var(--font-size-lg);
+}
+
+.toast-message {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Progress Bars */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--bg-surface-2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: var(--primary-500);
+    border-radius: 4px;
+    transition: width var(--transition-slow);
+}
+
+/* Streak Animation */
+.streak-fire {
+    position: relative;
+    overflow: hidden;
+}
+
+.streak-fire::before {
+    content: '🔥';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: streakFire 2s infinite;
+    font-size: var(--font-size-lg);
+}
+
+@keyframes streakFire {
+    0% { transform: translate(0, -50%); opacity: 1; }
+    100% { transform: translate(-20px, -50%); opacity: 0; }
+}
+
+/* Achievement Badges */
+.achievement-badge {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg-surface);
+    border: 2px solid var(--habit-gold);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+    z-index: 2000;
+    animation: achievementPop 0.5s ease-out;
+}
+
+@keyframes achievementPop {
+    0% { transform: translate(-50%, -50%) scale(0); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+.achievement-icon {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--space-md);
+}
+
+.achievement-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.achievement-description {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Habit Garden/Forest */
+.garden-container {
+    position: fixed;
+    bottom: 80px;
+    right: var(--space-lg);
+    width: 200px;
+    height: 200px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    z-index: 100;
+}
+
+.garden-plant {
+    font-size: var(--font-size-2xl);
+    animation: plantGrow 0.5s ease-out;
+}
+
+@keyframes plantGrow {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Theme Adjustments */
+@media (max-width: 768px) {
+    .toast {
+        top: var(--space-md);
+        right: var(--space-md);
+        left: var(--space-md);
+        max-width: none;
+    }
+    
+    .garden-container {
+        width: 150px;
+        height: 150px;
+        bottom: 70px;
+        right: var(--space-md);
+    }
+    
+    .achievement-badge {
+        margin: var(--space-md);
+        width: calc(100% - 2rem);
+    }
+}
